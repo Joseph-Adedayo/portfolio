@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.05 16.05">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Gilroy-SemiBold, Gilroy-SemiBold;
+        font-size: 11.98px;
+        font-weight: 600;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" width="16.05" height="16.05"/>
+  <text class="cls-2" transform="translate(1.35 11.83)"><tspan class="cls-3" x="0" y="0">&gt;</tspan><tspan class="cls-1" x="6.17" y="0">J</tspan></text>
+</svg>

@@ -26,8 +26,44 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@font-face {
+  font-family: "gilroysemibold";
+  src: url("../public/fonts/Gilroy-SemiBold.woff2");
+}
+
+@font-face {
+  font-family: "gilroyextrabold";
+  src: url("../public/fonts/Gilroy-Extrabold.woff2");
+}
+
+@font-face {
+  font-family: "gilroyregular";
+  src: url("../public/fonts/Gilroy-Regular.woff2");
+}
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
+
+  .shadow-glow:hover {
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 30px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+-webkit-scrollbar {
+  display: none;
 }
