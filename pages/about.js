@@ -1,7 +1,3 @@
-// Add all meta data
-// Publish on vercel + github
-// Add to CV
-
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, techIcons } from "@/utils/projects";
