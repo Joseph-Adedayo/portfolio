@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -20,6 +19,7 @@ export default function Home() {
   );
 }
 
+// Front Splash Screen
 const SplashScreen = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
