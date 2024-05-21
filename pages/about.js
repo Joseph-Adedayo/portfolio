@@ -28,7 +28,7 @@ export default function About() {
 
     return (
         <>
-            <main className="no-scrollbar font-gilroysemibold">
+            <main className="hide-scrollbar font-gilroysemibold">
                 <AnimatePresence>
                     {isNavVisible && (
                         <motion.header

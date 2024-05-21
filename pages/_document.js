@@ -13,7 +13,7 @@ export default function Document() {
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <body>
+      <body className="hide-scrollbar">
         <Main />
         <NextScript />
       </body>
