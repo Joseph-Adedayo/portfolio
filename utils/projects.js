@@ -3,7 +3,7 @@ export const projects = [
     id: 0,
     src: "/projects/spotlovess.png",
     title: "SpotLove",
-    desc: "A web dating application that pairs users based on their music preferences. SpotLove provides a more exciting, interesting and innovative way of creating deep connections. The app uses the Spotify API together information about the users and uses distance metrics to find the similarity between users to provide matches. Users can play music within the application, find new songs, playlists and chat with users using realtime databases.",
+    desc: "A web dating application that pairs users based on their music preferences. SpotLove provides a more exciting, interesting and innovative way of creating deep connections. The app uses the Spotify API to gather information about the users and uses distance metrics to find the similarity between users to provide matches. Users can play music within the application, find new songs, playlists and chat with users using realtime databases.",
     link: "https://spotlove.vercel.app/",
     code: "https://gitlab.computing.dcu.ie/adedayj2/2024-ca400-adedayj2-igalaj2",
     tech: [
