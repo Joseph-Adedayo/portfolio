@@ -121,9 +121,10 @@ export default function About() {
                     <Info />
                     <Testimonials />
                     <Projects setIsNavVisible={setIsNavVisible} />
+                    <Footer />
                 </div>
             </main>
-            <Footer />
+
         </>
     );
 }
@@ -381,8 +382,8 @@ const ProjectCard = ({ project }) => {
 // Footer component for the website footer
 const Footer = () => {
     return (
-        <footer className="bg-black rounded-lg shadow m-4">
-            <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <footer className="bg-black rounded-lg shadow ">
+            <div className="w-full mx-auto max-w-screen-xl px-5 md:px-0 py-8 md:flex md:items-center md:justify-between">
                 <span className="text-sm text-gray-500 sm:text-center">
                     © 2024{" "}
                     <a href="/" className="hover:underline">
