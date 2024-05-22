@@ -9,9 +9,7 @@ export default function Document() {
         <link rel="preload" href="/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <meta
           name="description"
-          content={
-            "A passionate and creative Software Developer with a flair for Front-End Design"
-          }
+          content="A passionate and creative Software Developer with a flair for Front-End Design"
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
