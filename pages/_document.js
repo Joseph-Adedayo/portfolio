@@ -27,7 +27,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.svg" />
 
       </Head>
-      <body className="hide-scrollbar font-gilroysemibold">
+      <body className="hide-scrollbar font-gilroysemibold bg-black">
         <Main />
         <NextScript />
       </body>
