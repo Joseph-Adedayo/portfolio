@@ -11,7 +11,21 @@ export default function Document() {
           name="description"
           content="A passionate and creative Software Developer with a flair for Front-End Design"
         />
+
+        <meta property="og:title" content="Joseph Adedayo" />
+        <meta property="og:description" content="A passionate and creative Software Developer with a flair for Front-End Design" />
+        <meta property="og:image" content="https://www.josephadedayo.com/joe.jpg" />
+        <meta property="og:url" content="https://www.josephadedayo.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:alt" content="Joseph Adedayo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Joseph Adedayo" />
+        <meta name="twitter:description" content="A passionate and creative Software Developer with a flair for Front-End Design" />
+        <meta name="twitter:image" content="https://www.josephadedayo.com/joe.jpg" />
+        <meta name="twitter:url" content="https://www.josephadedayo.com/" />
         <link rel="icon" href="/favicon.svg" />
+
       </Head>
       <body className="hide-scrollbar font-gilroysemibold">
         <Main />
