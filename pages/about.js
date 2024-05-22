@@ -45,7 +45,7 @@ export default function About() {
                                         {currentText}
                                     </a>
                                     <button
-                                        className={`inline-flex items-center p-1 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
+                                        className={`inline-flex items-center mb-2 p-1 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
                                         onClick={() => setShowElement(!showElement)}
                                     >
                                         <span className="sr-only">Open main menu</span>
@@ -55,7 +55,7 @@ export default function About() {
                                     </button>
 
                                     <div className="w-full hidden md:block md:w-auto" id="navbar-default">
-                                        <ul className="font-medium items-center text-xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
+                                        <ul className="font-medium items-center text-2xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
                                             <li>
                                                 <a href="#Projects" className="block py-2 px-3">Projects</a>
                                             </li>
