@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, techIcons } from "@/utils/projects";
 import { testimonials } from "@/utils/testimonials";
@@ -209,7 +210,11 @@ const Info = () => {
                     </div>
 
                     <div className="justify-left p-10">
-                        <img className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom rounded-3xl" src="/joe.jpg" alt="" />
+                        <Image
+                            width={500}
+                            height={500}
+                            priority
+                            className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom rounded-3xl" src="/joe.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -334,9 +339,11 @@ const ProjectCard = ({ project }) => {
             variants={imageVariants}
         >
             <a href={project.link} className="relative block overflow-hidden rounded-lg w-11/12 sm:w-full">
-                <img
+                <Image
                     alt={project.title}
                     src={project.src}
+                    width={800}
+                    height={500}
                     className="w-full shadow-glow border-gray-200 border border-opacity-10 shadow-2xl shadow-black"
                 />
                 <motion.div

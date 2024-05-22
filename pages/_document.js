@@ -4,7 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title> Joseph Adedayo </title>
+        <link rel="preload" href="/fonts/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Gilroy-Extrabold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <meta
           name="description"
           content={
@@ -13,7 +15,7 @@ export default function Document() {
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <body className="hide-scrollbar">
+      <body className="hide-scrollbar font-gilroysemibold">
         <Main />
         <NextScript />
       </body>
