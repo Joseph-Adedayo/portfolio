@@ -454,7 +454,9 @@ const ProjectCard = ({ project }) => {
         />
       </a>
       <div className="pt-10 rounded-lg shadow-lg">
-        <h3 className="text-5xl font-semibold text-white">{project.title}</h3>
+        <h3 className="text-3xl lg:text-5xl font-semibold text-white">
+          {project.title}
+        </h3>
         <div className="mt-4 gap-2 flex items-center">
           {project.tech.map((tech) => (
             <img
