@@ -25,6 +25,16 @@ export const projects = [
     code: "",
     tech: ["WordPress", "Shopify"],
   },
+
+  {
+    id: 2,
+    src: "/projects/ErosTouch.png",
+    title: "ErosTouch",
+    desc: "ErosTouch is an e-commerce website for a hair business, offering a seamless shopping experience. The website is built with Shopify as a headless CMS and Next.js for the frontend, allowing for fast, dynamic pages. Using GraphQL, it fetches data from Shopify and displays it in a custom, user-friendly layout. This solution is tailored to meet the unique needs of the business while providing a smooth, engaging experience for customers.",
+    code: "",
+    link: "https://erostouchhair.com/",
+    tech: ["Shopify", "NextJs", "Vercel", "React", "GraphQL"],
+  },
 ];
 
 export const techIcons = {
@@ -37,4 +47,5 @@ export const techIcons = {
   Python: "/logos/python.svg",
   WordPress: "/logos/wordpress.svg",
   Shopify: "/logos/shopify.svg",
+  GraphQL: "/logos/graphql.svg",
 };

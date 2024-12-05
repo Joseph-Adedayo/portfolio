@@ -40,7 +40,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               <nav
-                className={`md:text-white ${showElement ? "bg-white text-black py-5 shadow-xl" : ""}`}
+                className={`md:text-white ${showElement ? "bg-white text-black pb-3s shadow-xl" : ""}`}
               >
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-10">
                   <a
@@ -50,7 +50,7 @@ export default function About() {
                     {currentText}
                   </a>
                   <button
-                    className={`inline-flex items-center mb-2 p-1 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
+                    className={`inline-flex items-center mb-0.5 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
                     onClick={() => setShowElement(!showElement)}
                   >
                     <span className="sr-only">Open main menu</span>
@@ -91,11 +91,12 @@ export default function About() {
                       </li>
                       <li>
                         <a href="https://github.com/Joseph-Adedayo">
+                          <span className="sr-only">GitHub</span>
                           <svg
                             fill="#FFFFFF"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 72 72"
-                            className="cursor-pointer py-2 w-8"
+                            className="cursor-pointer py-2 w-8 aria-hidden"
                           >
                             <path d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z" />
                           </svg>
@@ -103,12 +104,13 @@ export default function About() {
                       </li>
                       <li>
                         <a href="https://www.joeuroedits.com/">
+                          <span className="sr-only">J0€ Edits</span>
                           <img
                             src={"/J0€_Edits_Logo_Transper1.png"}
                             alt="J0€ Edits Logo"
                             width={40}
                             height={50}
-                            className="md:ml-3 py-2"
+                            className="md:ml-3 py-2 aria-hidden"
                           />
                         </a>
                       </li>
@@ -199,15 +201,15 @@ const Hero = () => {
       transition={{ ease: "easeInOut", duration: 0.3 }}
       className="bg-cover bg-[url('/backg.png')]"
     >
-      <div className="h-screen bg-black bg-opacity-40 px-6 pt-14 lg:px-8 flex items-center justify-center text-white font-gilroyextrabold">
+      <div className="h-screen bg-black bg-opacity-40 px-4 pt-14 lg:px-8 flex items-center justify-center text-white font-gilroyextrabold">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ ease: "easeInOut", duration: 3 }}
         >
-          <div className="mb-8 flex justify-center">
-            <div className="relative animate-pulse rounded-full px-3 py-1 text-xs md:text-sm font-gilroyregular text-center leading-6 text-white ring-1 ring-gray-100/20 hover:ring-gray-900/90">
+          <div className="mb-4 lg:mb-8 flex justify-center">
+            <div className="relative animate-pulse rounded-full px-3 lg:py-1 text-xs md:text-sm font-gilroyregular text-center leading-6 text-white ring-1 ring-gray-100/20 hover:ring-gray-900/90">
               Graphic designs, videos and branding{" "}
               <a
                 href="https://www.joeuroedits.com/"
@@ -219,10 +221,10 @@ const Hero = () => {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-8xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-8xl xl:text-8xl">
               Building brands, businesses and software. 🚀
             </h1>
-            <p className="mt-2 text-lg leading-8 font-gilroyregular">
+            <p className="mt-2 text-sm lg:text-lg lg:leading-8 font-gilroyregular">
               This is my personal website where I share my thoughts, ideas and
               projects.
             </p>
@@ -247,9 +249,9 @@ const Info = () => {
       id="About"
       className="pt-10 overflow-hidden bg-transparent md:pt-0 sm:pt-16 2xl:pt-16"
     >
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-8xl">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
-          <div className="px-10">
+          <div className="lg:px-10">
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Hey 👋 I am Joseph Adedayo.
             </h2>
@@ -275,12 +277,12 @@ const Info = () => {
             </p>
           </div>
 
-          <div className="justify-left p-10">
+          <div className="justify-left py-5 lg:p-10">
             <Image
               width={500}
               height={500}
               priority
-              className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom rounded-3xl"
+              className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom rounded-xl"
               src="/joe.jpg"
               alt=""
             />
@@ -325,7 +327,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className="container mx-auto py-5 md:py-12 pt-20 px-14 md:px-10"
+      className="container mx-auto py-5 md:py-12 lg:pt-20 px-4 md:px-10"
       ref={inViewRef}
     >
       <motion.div
@@ -374,7 +376,7 @@ const Testimonials = () => {
 
 // Projects component for displaying projects
 const Projects = ({ setIsNavVisible }) => {
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     setIsNavVisible(!inView);
@@ -382,10 +384,10 @@ const Projects = ({ setIsNavVisible }) => {
 
   return (
     <div id="Projects" ref={ref} className="mx-auto px-5 py-4 md:py-12 md:px-0">
-      <h1 className="text-5xl md:text-3xl font-gilroysemibold leading-tight text-white mt-20 sm:text-4xl lg:text-5xl">
+      <h1 className="text-5xl md:text-3xl font-gilroysemibold leading-tight text-white mt-10 sm:text-4xl lg:text-5xl">
         Projects
       </h1>
-      <div className="grid gap-20 pt-5 md:pt-20">
+      <div className="grid gap-10 lg:gap-20 pt-8 md:pt-20">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -437,7 +439,7 @@ const ProjectCard = ({ project }) => {
     >
       <a
         href={project.link}
-        className="relative block overflow-hidden rounded-lg w-11/12 sm:w-full"
+        className="relative block overflow-hidden rounded-lg w-full"
       >
         <Image
           alt={project.title}
@@ -453,8 +455,8 @@ const ProjectCard = ({ project }) => {
           variants={shimmerVariants}
         />
       </a>
-      <div className="pt-10 rounded-lg shadow-lg">
-        <h3 className="text-3xl lg:text-5xl font-semibold text-white">
+      <div className="pt-8 rounded-lg shadow-lg">
+        <h3 className="text-4xl lg:text-5xl font-semibold text-white">
           {project.title}
         </h3>
         <div className="mt-4 gap-2 flex items-center">
@@ -473,11 +475,13 @@ const ProjectCard = ({ project }) => {
         <div className="mt-4 gap-4 flex items-center">
           {project.link.length > 0 && (
             <a href={project.link}>
+              <span className="sr-only">Link to Project</span>
               <LinkIcon className="w-6 h-6 text-blue-400 hover:text-blue-600" />
             </a>
           )}
           {project.code.length > 0 && (
             <a href={project.code}>
+              <span className="sr-only">Link to Code</span>
               <CodeBracketIcon className="w-6 h-6 text-blue-500  hover:text-blue-600" />
             </a>
           )}
@@ -528,6 +532,7 @@ const stars = (
       .fill()
       .map((_, i) => (
         <li key={i}>
+          <span className="sr-only">Star</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 96 960 960"
