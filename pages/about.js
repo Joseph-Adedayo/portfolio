@@ -482,7 +482,7 @@ const ProjectCard = ({ project }) => {
           {project.code.length > 0 && (
             <a href={project.code}>
               <span className="sr-only">Link to Code</span>
-              <CodeBracketIcon className="w-6 h-6 text-blue-500  hover:text-blue-600" />
+              <CodeBracketIcon className="w-6 h-6 text-blue-400 hover:text-blue-600" />
             </a>
           )}
         </div>

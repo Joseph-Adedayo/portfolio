@@ -16,14 +16,15 @@ export const projects = [
       "Cypress",
     ],
   },
+
   {
     id: 1,
-    src: "/projects/PlantainSound.png",
-    title: "PlantainSound",
-    desc: "Website for music label PlantainSound. The website is a platform for the music label to showcase their music, artists and events. The website is a perfect blend of elegance and simplicity. The website is built using WordPress and Shopify for the e-commerce section.",
-    link: "https://plantainsound.com/",
+    src: "/projects/TheSundayClub.png",
+    title: "The Sunday Club",
+    desc: "A vibrant community website for The Sunday Club, designed to engage young Christian adults through events, discussions, and faith-based activities. Built with Next.js, Tailwind CSS, and Framer Motion, the website integrates with the Eventbrite API to display upcoming events and features a contact form powered by Resend.",
+    link: "https://thesundayclubire.com/",
     code: "",
-    tech: ["WordPress", "Shopify"],
+    tech: ["NextJs", "React", "Vercel"],
   },
 
   {
@@ -34,6 +35,16 @@ export const projects = [
     code: "",
     link: "https://erostouchhair.com/",
     tech: ["Shopify", "NextJs", "Vercel", "React", "GraphQL"],
+  },
+
+  {
+    id: 4,
+    src: "/projects/PlantainSound.png",
+    title: "PlantainSound",
+    desc: "Website for music label PlantainSound. The website is a platform for the music label to showcase their music, artists and events. The website is a perfect blend of elegance and simplicity. The website is built using WordPress and Shopify for the e-commerce section.",
+    link: "https://plantainsound.com/",
+    code: "",
+    tech: ["WordPress", "Shopify"],
   },
 ];
 
