@@ -42,7 +42,7 @@ export default function About() {
               <nav
                 className={`md:text-white ${showElement ? "bg-white text-black pb-3s shadow-xl" : ""}`}
               >
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-10">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3 px-5 2xl::px-0">
                   <a
                     href="/"
                     className="flex items-center space-x-3 rtl:space-x-reverse font-gilroysemibold text-3xl"
@@ -50,7 +50,7 @@ export default function About() {
                     {currentText}
                   </a>
                   <button
-                    className={`inline-flex items-center mb-0.5 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
+                    className={`inline-flex absolute top-2.5 right-3 items-center mb-0.5 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
                     onClick={() => setShowElement(!showElement)}
                   >
                     <span className="sr-only">Open main menu</span>
@@ -177,7 +177,7 @@ export default function About() {
         </AnimatePresence>
 
         <Hero />
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className=" mx-auto  max-w-7xl px-5 2xl:px-0">
           <Info />
           <Testimonials />
           <Projects setIsNavVisible={setIsNavVisible} />
@@ -208,18 +208,6 @@ const Hero = () => {
           exit={{ opacity: 0 }}
           transition={{ ease: "easeInOut", duration: 3 }}
         >
-          <div className="mb-4 lg:mb-8 flex justify-center">
-            <div className="relative animate-pulse rounded-full px-3 lg:py-1 text-xs md:text-sm font-gilroyregular text-center leading-6 text-white ring-1 ring-gray-100/20 hover:ring-gray-900/90">
-              Graphic designs, videos and branding{" "}
-              <a
-                href="https://www.joeuroedits.com/"
-                className="font-semibold text-slate font-gilroyextrabold"
-              >
-                <span className="absolute inset-0" aria-hidden="true" />
-                <span aria-hidden="true"> | Click here &nbsp; &rarr;</span>
-              </a>
-            </div>
-          </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-8xl xl:text-8xl">
               Building brands, businesses and software. 🚀
@@ -249,13 +237,13 @@ const Info = () => {
       id="About"
       className="pt-10 overflow-hidden bg-transparent md:pt-0 sm:pt-16 2xl:pt-16"
     >
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-8xl">
+      <div className=" mx-auto  ">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
-          <div className="lg:px-10">
+          <div className="">
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Hey 👋 I am Joseph Adedayo.
             </h2>
-            <p className="max-w-2xl mt-3 text-xl md:text-4xl font-gilroyregular leading-relaxed text-gray-400 md:mt-8">
+            <p className="max-w-2xl mt-3 text-lg md:text-4xl font-gilroyregular leading-relaxed text-gray-400 md:mt-8">
               I am a designer, developer and creative director based in Ireland.
               I love all things tech, and design. I create modern, urban UI/UX
               designs for new emerging brands and businesses 👨🏾‍💻
@@ -277,12 +265,12 @@ const Info = () => {
             </p>
           </div>
 
-          <div className="justify-left py-5 lg:p-10">
+          <div className="justify-left py-5 ">
             <Image
               width={500}
               height={500}
               priority
-              className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom rounded-xl"
+              className="relative w-full xl:max-w-lg xl:ml-auto 2xl:origin-bottom rounded-xl"
               src="/joe.jpg"
               alt=""
             />
@@ -326,10 +314,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div
-      className="container mx-auto py-5 md:py-12 lg:pt-20 px-4 md:px-10"
-      ref={inViewRef}
-    >
+    <div className="container mx-auto py-5 md:py-12 lg:pt-20" ref={inViewRef}>
       <motion.div
         ref={ref}
         variants={container}
@@ -376,14 +361,14 @@ const Testimonials = () => {
 
 // Projects component for displaying projects
 const Projects = ({ setIsNavVisible }) => {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
 
   useEffect(() => {
     setIsNavVisible(!inView);
   }, [inView, setIsNavVisible]);
 
   return (
-    <div id="Projects" ref={ref} className="mx-auto px-5 py-4 md:py-12 md:px-0">
+    <div id="Projects" ref={ref} className="mx-auto py-4 md:py-12 md:px-0">
       <h1 className="text-5xl md:text-3xl font-gilroysemibold leading-tight text-white mt-10 sm:text-4xl lg:text-5xl">
         Projects
       </h1>
@@ -455,34 +440,34 @@ const ProjectCard = ({ project }) => {
           variants={shimmerVariants}
         />
       </a>
-      <div className="pt-8 rounded-lg shadow-lg">
+      <div className="pt-5 rounded-lg shadow-lg">
         <h3 className="text-4xl lg:text-5xl font-semibold text-white">
           {project.title}
         </h3>
-        <div className="mt-4 gap-2 flex items-center">
+        <div className="mt-3 gap-1 flex items-center">
           {project.tech.map((tech) => (
             <img
               key={tech}
               src={techIcons[tech]}
               alt={tech}
-              className="w-6 h-6 mr-2"
+              className="size-5 mr-2"
             />
           ))}
         </div>
-        <p className="mt-4 text-xl font-gilroyregular text-gray-300">
+        <p className="mt-3 text-sm lg:text-xl font-gilroyregular text-gray-300">
           {project.desc}
         </p>
-        <div className="mt-4 gap-4 flex items-center">
+        <div className="mt-3 gap-4 flex items-center">
           {project.link.length > 0 && (
             <a href={project.link}>
               <span className="sr-only">Link to Project</span>
-              <LinkIcon className="w-6 h-6 text-blue-400 hover:text-blue-600" />
+              <LinkIcon className="size-5 text-blue-400 hover:text-blue-600" />
             </a>
           )}
           {project.code.length > 0 && (
             <a href={project.code}>
               <span className="sr-only">Link to Code</span>
-              <CodeBracketIcon className="w-6 h-6 text-blue-400 hover:text-blue-600" />
+              <CodeBracketIcon className="size-5 text-blue-400 hover:text-blue-600" />
             </a>
           )}
         </div>
@@ -495,15 +480,15 @@ const ProjectCard = ({ project }) => {
 const Footer = () => {
   return (
     <footer className="bg-black rounded-lg shadow ">
-      <div className="w-full mx-auto max-w-screen-xl px-5 md:px-0 py-8 md:flex md:items-center md:justify-between">
+      <div className="w-full mx-auto max-w-screen-xl py-8 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center">
-          © 2024{" "}
+          © {new Date().getFullYear()}{" "}
           <a href="/" className="hover:underline">
             Joseph Adedayo™
           </a>
           . All Rights Reserved.
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-1.5 text-sm font-medium text-gray-500 sm:mt-0">
           <li>
             <a href="#About" className="hover:underline me-4 md:me-6">
               About Me

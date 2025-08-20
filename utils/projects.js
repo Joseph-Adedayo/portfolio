@@ -18,6 +18,25 @@ export const projects = [
   },
 
   {
+    id: 6,
+    src: "/projects/gloat.png",
+    title: "G.L.O.A.T",
+    desc: "The Greatest Library of All Time, a comprehensive eCOA Library for licensing instruments in the clinical trial space. Worked on the frontend using Next.js and integrated with various backend APIs. Developed a user-friendly interface for researchers to access and manage clinical trial data.",
+    link: "https://instrument-library.herokuapp.com/",
+    code: "",
+    tech: ["NextJs", "Heroku", "React", "Cypress"],
+  },
+  {
+    id: 5,
+    src: "/projects/noirejournal.png",
+    title: "Noirè Journal",
+    desc: "Noirè Journal is an e-commerce website for a luxury journal. The website is built with Shopify as a headless CMS and Next.js for the frontend, allowing for fast, dynamic pages. It features a luxurious design with a focus on high-quality visuals and user experience.",
+    link: "https://noirejournal.com/",
+    code: "",
+    tech: ["Shopify", "NextJs", "Vercel", "React", "GraphQL"],
+  },
+
+  {
     id: 1,
     src: "/projects/TheSundayClub.png",
     title: "The Sunday Club",
