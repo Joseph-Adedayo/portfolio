@@ -208,8 +208,8 @@ const Hero = () => {
           exit={{ opacity: 0 }}
           transition={{ ease: "easeInOut", duration: 3 }}
         >
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl 2xl:text-8xl">
+          <div className="text-center lg:px-10">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
               Building brands, businesses and software. 🚀
             </h1>
             <p className="mt-2 text-sm lg:text-lg lg:leading-8 font-gilroyregular">
