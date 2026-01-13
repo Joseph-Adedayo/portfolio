@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 0,
-    src: "/projects/spotlovess.png",
+    src: "/projects/spotlovess.jpg",
     title: "SpotLove",
     desc: "A web dating application that pairs users based on their music preferences. SpotLove provides a more exciting, interesting and innovative way of creating deep connections. The app uses the Spotify API to gather information about the users and uses distance metrics to find the similarity between users to provide matches. Users can play music within the application, find new songs, playlists and chat with users using realtime databases.",
     link: "https://spotlove.vercel.app/",
@@ -19,7 +19,7 @@ export const projects = [
 
   {
     id: 6,
-    src: "/projects/gloat.png",
+    src: "/projects/gloat.jpg",
     title: "G.L.O.A.T",
     desc: "The Greatest Library of All Time, a comprehensive eCOA Library for licensing instruments in the clinical trial space. Worked on the frontend using Next.js and integrated with various backend APIs. Developed a user-friendly interface for researchers to access and manage clinical trial data.",
     link: "https://instrument-library.herokuapp.com/",
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     id: 5,
-    src: "/projects/noirejournal.png",
+    src: "/projects/noirejournal.jpg",
     title: "Noirè Journal",
     desc: "Noirè Journal is an e-commerce website for a luxury journal. The website is built with Shopify as a headless CMS and Next.js for the frontend, allowing for fast, dynamic pages. It features a luxurious design with a focus on high-quality visuals and user experience.",
     link: "https://noirejournal.com/",
@@ -38,7 +38,7 @@ export const projects = [
 
   {
     id: 1,
-    src: "/projects/TheSundayClub.png",
+    src: "/projects/TheSundayClub.jpg",
     title: "The Sunday Club",
     desc: "A vibrant community website for The Sunday Club, designed to engage young Christian adults through events, discussions, and faith-based activities. Built with Next.js, Tailwind CSS, and Framer Motion, the website integrates with the Eventbrite API to display upcoming events and features a contact form powered by Resend.",
     link: "https://thesundayclubire.com/",
@@ -48,7 +48,7 @@ export const projects = [
 
   {
     id: 2,
-    src: "/projects/ErosTouch.png",
+    src: "/projects/ErosTouch.jpg",
     title: "ErosTouch",
     desc: "ErosTouch is an e-commerce website for a hair business, offering a seamless shopping experience. The website is built with Shopify as a headless CMS and Next.js for the frontend, allowing for fast, dynamic pages. Using GraphQL, it fetches data from Shopify and displays it in a custom, user-friendly layout. This solution is tailored to meet the unique needs of the business while providing a smooth, engaging experience for customers.",
     code: "",

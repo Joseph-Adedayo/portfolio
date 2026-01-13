@@ -30,52 +30,102 @@ export default function About() {
   return (
     <>
       <main className="hide-scrollbar font-gilroysemibold">
-        <AnimatePresence>
-          {isNavVisible && (
-            <motion.header
-              className="fixed inset-x-0 top-0 items-center justify-center z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <nav
-                className={`md:text-white ${showElement ? "bg-white text-black pb-3s shadow-xl" : ""}`}
+        <motion.header
+          className="fixed inset-x-0 top-0 items-center justify-center z-50"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: isNavVisible ? 1 : 0 }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+          style={{ pointerEvents: isNavVisible ? "auto" : "none" }}
+        >
+          <nav
+            className={`md:text-white ${showElement ? "bg-white text-black pb-3s shadow-xl" : ""}`}
+          >
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3 px-5 2xl::px-0">
+              <a
+                href="/"
+                className="flex items-center space-x-3 rtl:space-x-reverse font-gilroysemibold text-3xl"
               >
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3 px-5 2xl::px-0">
-                  <a
-                    href="/"
-                    className="flex items-center space-x-3 rtl:space-x-reverse font-gilroysemibold text-3xl"
-                  >
-                    {currentText}
-                  </a>
-                  <button
-                    className={`inline-flex absolute top-2.5 right-3 items-center mb-0.5 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
-                    onClick={() => setShowElement(!showElement)}
-                  >
-                    <span className="sr-only">Open main menu</span>
-                    <svg
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 17 14"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 1h15M1 7h15M1 13h15"
-                      />
-                    </svg>
-                  </button>
+                {currentText}
+              </a>
+              <button
+                className={`inline-flex absolute top-2.5 right-3 items-center mb-0.5 w-10 h-10 justify-center text-sm ${showElement ? "text-black" : "text-white"} rounded-lg md:hidden`}
+                onClick={() => setShowElement(!showElement)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
 
-                  <div
-                    className="w-full hidden md:block md:w-auto"
+              <div
+                className="w-full hidden md:block md:w-auto"
+                id="navbar-default"
+              >
+                <ul className="font-medium items-center text-2xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
+                  <li>
+                    <a href="#Projects" className="block py-2 px-3">
+                      Projects
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:yemi200237@gmail.com"
+                      className="block py-2 px-3"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Joseph-Adedayo">
+                      <span className="sr-only">GitHub</span>
+                      <svg
+                        fill="#FFFFFF"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 72 72"
+                        className="cursor-pointer py-2 w-8 aria-hidden"
+                      >
+                        <path d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.joeuroedits.com/">
+                      <span className="sr-only">J0€ Edits</span>
+                      <img
+                        src={"/J0€_Edits_Logo_Transper1.png"}
+                        alt="J0€ Edits Logo"
+                        width={40}
+                        height={50}
+                        className="md:ml-3 py-2 aria-hidden"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <AnimatePresence>
+                {showElement && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full md:hidden md:w-auto"
                     id="navbar-default"
                   >
-                    <ul className="font-medium items-center text-2xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <ul className="font-medium items-center text-xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-1 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
                       <li>
                         <a href="#Projects" className="block py-2 px-3">
                           Projects
@@ -91,90 +141,36 @@ export default function About() {
                       </li>
                       <li>
                         <a href="https://github.com/Joseph-Adedayo">
-                          <span className="sr-only">GitHub</span>
                           <svg
-                            fill="#FFFFFF"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 72 72"
-                            className="cursor-pointer py-2 w-8 aria-hidden"
+                            className="cursor-pointer py-2 w-8"
                           >
-                            <path d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z" />
+                            <path
+                              fill="currentColor"
+                              d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z"
+                            />
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="https://www.joeuroedits.com/">
-                          <span className="sr-only">J0€ Edits</span>
                           <img
-                            src={"/J0€_Edits_Logo_Transper1.png"}
+                            src={"/J0€_Edits_Logo_Transper1black.png"}
                             alt="J0€ Edits Logo"
-                            width={40}
-                            height={50}
-                            className="md:ml-3 py-2 aria-hidden"
+                            width={50}
+                            height={60}
+                            className="md:ml-3 py-2"
                           />
                         </a>
                       </li>
                     </ul>
-                  </div>
-
-                  <AnimatePresence>
-                    {showElement && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="w-full md:hidden md:w-auto"
-                        id="navbar-default"
-                      >
-                        <ul className="font-medium items-center text-xl text-black md:text-white justify-center flex flex-col p-4 md:p-0 mt-1 rounded-lg md:flex-row md:space-x-1 rtl:space-x-reverse md:mt-0 md:border-0">
-                          <li>
-                            <a href="#Projects" className="block py-2 px-3">
-                              Projects
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="mailto:yemi200237@gmail.com"
-                              className="block py-2 px-3"
-                            >
-                              Contact
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://github.com/Joseph-Adedayo">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 72 72"
-                                className="cursor-pointer py-2 w-8"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z"
-                                />
-                              </svg>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.joeuroedits.com/">
-                              <img
-                                src={"/J0€_Edits_Logo_Transper1black.png"}
-                                alt="J0€ Edits Logo"
-                                width={50}
-                                height={60}
-                                className="md:ml-3 py-2"
-                              />
-                            </a>
-                          </li>
-                        </ul>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </nav>
-            </motion.header>
-          )}
-        </AnimatePresence>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </nav>
+        </motion.header>
 
         <Hero />
         <div className=" mx-auto  max-w-7xl px-5 2xl:px-0">
@@ -195,7 +191,7 @@ const Hero = () => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0.3, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       exit={{ opacity: 0 }}
       transition={{ ease: "easeInOut", duration: 0.3 }}
@@ -203,7 +199,7 @@ const Hero = () => {
     >
       <div className="h-screen bg-black bg-opacity-40 px-4 pt-14 lg:px-8 flex items-center justify-center text-white font-gilroyextrabold">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ ease: "easeInOut", duration: 3 }}
@@ -244,11 +240,11 @@ const Info = () => {
               Hey 👋 I am Joseph Adedayo.
             </h2>
             <p className="max-w-2xl mt-3 text-lg md:text-4xl font-gilroyregular leading-relaxed text-gray-400 md:mt-8">
-              I am a designer, developer and creative director based in Ireland.
-              I love all things tech, and design. I create modern, urban UI/UX
-              designs for new emerging brands and businesses 👨🏾‍💻
+              I am a designer, front end developer and creative director based
+              in Ireland. I love all things tech, and design. I create modern,
+              urban apps and websites solutions for new emerging brands and
+              businesses 👨🏾‍💻
             </p>
-
             <p className="mt-4 text-xl text-white md:mt-8">
               <span className="relative inline-block">
                 <span className="absolute inline-block w-full bottom-0.5 h-2"></span>
@@ -361,7 +357,7 @@ const Testimonials = () => {
 
 // Projects component for displaying projects
 const Projects = ({ setIsNavVisible }) => {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0.15 });
 
   useEffect(() => {
     setIsNavVisible(!inView);
@@ -441,7 +437,7 @@ const ProjectCard = ({ project }) => {
         />
       </a>
       <div className="pt-5 rounded-lg shadow-lg">
-        <h3 className="text-4xl lg:text-5xl font-semibold text-white">
+        <h3 className="text-2xl lg:text-4xl font-semibold text-white">
           {project.title}
         </h3>
         <div className="mt-3 gap-1 flex items-center">
